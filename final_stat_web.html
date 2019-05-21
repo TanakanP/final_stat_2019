@@ -1,0 +1,383 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <h1>
+       ????????????????????????-???? ???????? ?????????????
+       </h1>
+       <div id="piechart" style="width: 900px; height: 500px;"></div>
+       <div id="linechart_material"></div>
+       <div id="chart_div" style="margin-top: 50px"></div>
+       <div id="chart_div2" style="margin-top: 50px"></div>
+       <div id="chart_div3" style="margin-top: 50px"></div>
+       <div id="chart_div4" style="margin-top: 50px"></div>
+       <div id="chart_div5" style="margin-top: 50px"></div>
+       <div id="chart_div6" style="margin-top: 50px"></div>
+       <div id="chart_div7" style="margin-top: 50px"></div>
+       <div id="chart_div8" style="margin-top: 50px"></div>
+       <div id="chart_div9" style="margin-top: 50px"></div>
+       <div id="chart_div10" style="margin-top: 50px"></div>
+       <div id="chart_div11" style="margin-top: 50px"></div>
+       <div id="chart_div12" style="margin-top: 50px"></div>
+       <h1>
+       ???????????
+       </h1>
+       <a href="www.nakhonpathom.go.th">?????????????????????</a><br>
+       <a href="www.nkppao.go.th">??????????????????????????????????????</a><br>
+       <a href="www.bb.go.th">????????????????????? </a>
+
+google.charts.load('current', {'packages':['corechart','bar', 'line']});
+      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawChartL);
+      google.charts.setOnLoadCallback(drawChart2);
+      google.charts.setOnLoadCallback(drawChart3);
+      google.charts.setOnLoadCallback(drawChart4);
+      google.charts.setOnLoadCallback(drawChart5);
+      google.charts.setOnLoadCallback(drawChart6);
+      google.charts.setOnLoadCallback(drawChart7);
+      google.charts.setOnLoadCallback(drawChart8);
+      google.charts.setOnLoadCallback(drawChart9);
+      google.charts.setOnLoadCallback(drawChart10);
+      google.charts.setOnLoadCallback(drawChart11);
+      google.charts.setOnLoadCallback(drawChart12);
+      google.charts.setOnLoadCallback(drawChart13);
+		
+    	function drawChartL() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', '?????');
+      data.addColumn('number', '???????????????');
+      data.addColumn('number', '?????');
+
+      data.addRows([
+        [1, 35373041, 0],
+			  [2, 83395699, 2.934437e+07],
+        [3,	165770887, 2.298909e+07],
+        [4,	44805336, 4.635726e+06],
+        [5,	164930497, 7.905686e+07],
+        [6,	342381706, 1.133416e+07],
+        [7,	64404086, 4.369379e+07],
+        [8,	8303710, 1.745427e+08],
+        [9,	150566510, 6.855571e+07],
+        [10,	55763178, 6.361407e+06],
+        [11,	202953311, 2.627322e+08],
+        [12,	20556222,1.294538e+07],
+        [13,	20625148, 3.392032e+07],
+        [14,	9404206, 1.170274e+08],
+        [15,	219347676, 9.243332e+07],
+        [16,	18834822,2.332059e+07],
+        [17,	19494133, 4.611119e+07],
+        [18,	28456536, 8.650223e+07],
+        [19,	27472365, 6.497717e+07],
+        [20,	589864521, 1.646354e+08],
+        [21,	30842674, 3.095415e+08],
+        [22,	14483088, 1.665822e+08],
+        [23,	16412102, 1.693779e+07],
+        [24,	9606317, 3.731934e+07],
+        [25,	898750715, 4.606406e+08],
+        [26,	768982380, 3.004065e+08],
+
+      ]);
+
+      var options = {
+        chart: {
+          title: '???????????????????????????????',
+          subtitle: '?????? 2560 - ?????? 2562'
+        },
+        width: 900,
+        height: 500
+      };
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+      chart.draw(data, google.charts.Line.convertOptions(options));
+    }
+    	
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Expense Type', 'Mean value'],
+          ['?????????????',     1.912987e+07],
+          ['????????????????',      3.378073e+07],
+          ['???????????????????',    4.688974e+06],
+          ['??????????????????????',   1.410748e+07],
+          ['????????????????',     2.790849e+07],
+          ['????????????????',      	7.446663e+07],
+          ['???????????????',      		1.289390e+07],
+          ['?????????????????????',      	2.216371e+06],
+          ['??????????????????',      		1.716424e+07],
+          ['??????????????????',     2.283959e+07],
+          ['???????????????????????????',      	5.736830e+08],
+          ['????????????',      	2.376087e+06],
+        ]);
+
+        var options = {
+          title: '?????????????????????????'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+      
+      function drawChart2() {
+        var data = google.visualization.arrayToDataTable([
+          ['?????????????', 'Mean', 'Median', 'Std'],
+          [' ',     	1.912987e+07,1.853584e+07,1.961329e+06]
+        ]);
+
+        var options = {
+          chart: {
+            title: '?????????????',
+            subtitle: '?? 2554-261',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart3() {
+        var data = google.visualization.arrayToDataTable([
+          ['????????????????', 'Mean', 'Median', 'Std'],
+          [' ',      	3.378073e+07,3.278373e+07,6.009930e+06]
+        ]);
+
+        var options = {
+          chart: {
+            title: '????????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div2'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart4() {
+        var data = google.visualization.arrayToDataTable([
+          ['??????????????????', 'Mean', 'Median', 'Std'],
+          [' ',    	4.688974e+06,4.372948e+06,7.354591e+05]
+        ]);
+
+        var options = {
+          chart: {
+            title: '??????????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div3'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart5() {
+        var data = google.visualization.arrayToDataTable([
+          ['??????????????????????', 'Mean', 'Median', 'Std'],
+          [' ',   	1.410748e+07,1.314337e+07,2.713447e+06]
+        ]);
+
+        var options = {
+          chart: {
+            title: '??????????????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div4'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart6() {
+        var data = google.visualization.arrayToDataTable([
+          ['????????????????', 'Mean', 'Median', 'Std'],
+          [' ',     	2.790849e+07,2.307313e+07,2.453796e+07]
+        ]);
+
+        var options = {
+          chart: {
+            title: '????????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div5'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart7() {
+        var data = google.visualization.arrayToDataTable([
+          ['????????????????', 'Mean', 'Median', 'Std'],
+          [' ',      	7.446663e+07,2.338221e+07,1.584471e+08]
+        ]);
+
+        var options = {
+          chart: {
+            title: '????????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div6'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart8() {
+        var data = google.visualization.arrayToDataTable([
+          ['???????????????', 'Mean', 'Median', 'Std'],
+          [' ',      			1.289390e+07,9.626813e+06,6.815189e+06]
+        ]);
+
+        var options = {
+          chart: {
+            title: '???????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div7'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart9() {
+        var data = google.visualization.arrayToDataTable([
+          ['?????????????????????', 'Mean', 'Median', 'Std'],
+          [' ',    2.216371e+06,2.039374e+06,4.171122e+05]
+        ]);
+
+        var options = {
+          chart: {
+            title: '?????????????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div8'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart10() {
+        var data = google.visualization.arrayToDataTable([
+          ['??????????????????', 'Mean', 'Median', 'Std'],
+          [' ',      	1.716424e+07,8.578503e+06,3.444787e+07]
+        ]);
+
+        var options = {
+          chart: {
+            title: '??????????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div9'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart11() {
+        var data = google.visualization.arrayToDataTable([
+          ['??????????????????', 'Mean', 'Median', 'Std'],
+          [' ',     		2.283959e+07,1.759496e+07,3.443418e+07]
+        ]);
+
+        var options = {
+          chart: {
+            title: '??????????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div10'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart12() {
+        var data = google.visualization.arrayToDataTable([
+          ['???????????????????????????', 'Mean', 'Median', 'Std'],
+          [' ',	 5.736830e+08,5.253873e+08,2.489020e+08]
+        ]);
+
+        var options = {
+          chart: {
+            title: '???????????????????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div11'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
+      function drawChart13() {
+        var data = google.visualization.arrayToDataTable([
+          ['????????????', 'Mean', 'Median', 'Std'],
+          [' ',      			2.376087e+06,6.000000e+04,6.599427e+06]
+        ]);
+
+        var options = {
+          chart: {
+            title: '????????????',
+            subtitle: '?? 2554-2561',
+          },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          hAxis: {format: 'decimal'},
+          height: 400,
+          colors: ['#1b9e77', '#d95f02', '#7570b3']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div12'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+
+      }
